@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post "resister" => "contents#resister"
   #お気に入り登録
   post "fav/add" => "favorites#add"
+  #ユーザの登録
+  post "adduser" => "users#add"
 
   #自分が投稿した音楽
   get "post" => "users#home"

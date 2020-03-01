@@ -13,6 +13,21 @@ class UsersController < ApplicationController
   def show
   end
 
+  def add
+    data = {
+      "username":params[:username],
+      "password":params[:password]
+    }
+    @user = User.new(data)
+    if @user.save
+      result = {"status": "success"}
+    else
+      result = {"status": "failed"}
+    end
+    render :json => result
+
+  end
+
   def home
     @user = User.find_by(username: params[:username])
     redirect_to controller: 'contents', action: 'home', id: @user.id
