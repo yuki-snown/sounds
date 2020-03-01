@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   get "favorites" => "favorites#index"
 
   #音楽登録API
-  post "resister" => "contents#resister"
+  get "resister" => "contents#resister"
   #お気に入り登録
-  post "fav/add" => "favorites#add"
+  get "fav/add" => "favorites#add"
   #ユーザの登録
-  post "user/add" => "users#add"
+  get "user/add" => "users#add"
 
   #自分が投稿した音楽
   get "post" => "users#home"
