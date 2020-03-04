@@ -1,6 +1,8 @@
 # Sounds API
 
-- ### 開発環境はGemfileに記載
+## 開発環境はGemfileに記載
+
+<br>
 
 # Model
 ## users
@@ -38,8 +40,6 @@
 
 # APIエンドポイント
 
-## DB確認用
-
 ### usersのtableの確認
 
 > https://quiet-retreat-26825.herokuapp.com/users
@@ -52,8 +52,6 @@
 
 > https://quiet-retreat-26825.herokuapp.com/favorites
 
-
-## 情報の登録
 
 ### 音楽登録
 
@@ -106,7 +104,7 @@
 
 ```
 
-## ログイン用
+### ログイン用
 > https://quiet-retreat-26825.herokuapp.com/auth
 
 ```
@@ -122,7 +120,7 @@
 
 ```
 
-## 自分が投稿した音楽
+### 自分が投稿した音楽
 > https://quiet-retreat-26825.herokuapp.com/post
 
 ```
@@ -143,7 +141,7 @@
 
 ```
 
-## タイトル検索
+### タイトル検索
 > https://quiet-retreat-26825.herokuapp.com/search
 
 ```
@@ -164,7 +162,7 @@
 
 ```
 
-## 直近のN件を取得
+### 直近のN件を取得
 > https://quiet-retreat-26825.herokuapp.com/current
 
 ```
@@ -185,7 +183,7 @@
 
 ```
 
-## 閲覧する際のデータ取得
+### 閲覧する際のデータ取得
 > https://quiet-retreat-26825.herokuapp.com/show
 
 ```
@@ -216,7 +214,7 @@
 
 ```
 
-## お気に入り呼び出し
+### お気に入り呼び出し
 > https://quiet-retreat-26825.herokuapp.com/fav/search
 
 ```
@@ -234,3 +232,8 @@
         image: hoge,
         sound: hoge
     }
+```  
+<br>
+
+# ドキュメント  
+- ## [【要求分析～設計】(ブレーンストーミング)](https://docs.google.com/presentation/d/1mNWX1J8QfB-hAZFYOP1rWPsZEVOfdJL6qjzvunCx0aQ/edit)
