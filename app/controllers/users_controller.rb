@@ -15,10 +15,10 @@ class UsersController < ApplicationController
 
   def auth
     @user = User.find_by(username: params[:username], password: params[:password])
-    if @user == []
-      return false
+    if @user.nil?
+      render :json => {"status": "false"}
     else
-      return true
+      render :json => {"status": "true"}
     end
   end
 
