@@ -42,22 +42,22 @@
 
 ### usersのtableの確認
 
-> https://cryptic-basin-01283.herokuapp.com/users
+> https://quiet-retreat-26825.herokuapp.com/users
 
 ### contentsのtableの確認
 
-> https://cryptic-basin-01283.herokuapp.com/contents
+> https://quiet-retreat-26825.herokuapp.com/contents
 
 ### favoritesのtableの確認
 
-> https://cryptic-basin-01283.herokuapp.com/favorites
+> https://quiet-retreat-26825.herokuapp.com/favorites
 
 
 ## 情報の登録
 
 ### 音楽登録
 
-> https://cryptic-basin-01283.herokuapp.com/resister
+> https://quiet-retreat-26825.herokuapp.com/resister
 
 ```
     params: 
@@ -66,7 +66,7 @@
         image: binary
         sound: binary
 
-    ex. https://cryptic-basin-01283.herokuapp.com/resister?user_id=1&title=hoge&image=hogehogehoge&sound=hogehogehoge
+    ex. https://quiet-retreat-26825.herokuapp.com/resister?user_id=1&title=hoge&image=hogehogehoge&sound=hogehogehoge
 
     成功時: {"status":"success"}
 
@@ -75,14 +75,14 @@
 ```
 
 ### お気に入り登録
-> https://cryptic-basin-01283.herokuapp.com/fav/add
+> https://quiet-retreat-26825.herokuapp.com/fav/add
 
 ```
     params: 
         user_id: integer
         content_id: integer
 
-    ex. https://cryptic-basin-01283.herokuapp.com/resister?user_id=1&content_id=2
+    ex. https://quiet-retreat-26825.herokuapp.com/resister?user_id=1&content_id=2
 
     成功時: {"status":"success"}
 
@@ -91,14 +91,14 @@
 ```
 
 ### ユーザの登録
-> https://cryptic-basin-01283.herokuapp.com/user/add
+> https://quiet-retreat-26825.herokuapp.com/user/add
 
 ```
     params: 
         username: string
         password: string
 
-    ex. https://cryptic-basin-01283.herokuapp.com/user/add?username=hoge&password=hogehoge
+    ex. https://quiet-retreat-26825.herokuapp.com/user/add?username=hoge&password=hogehoge
 
     成功時: {"status":"success"}
 
@@ -106,14 +106,30 @@
 
 ```
 
+## ログイン用
+> https://quiet-retreat-26825.herokuapp.com/auth
+
+```
+    params: 
+        username: string
+        password: string
+
+    ex. https://quiet-retreat-26825.herokuapp.com/user/add?username=hoge&password=hogehoge
+
+    成功時: {"status":"success", "id": 1}
+
+    失敗持: {"status":"failed"}
+
+```
+
 ## 自分が投稿した音楽
-> https://cryptic-basin-01283.herokuapp.com/post
+> https://quiet-retreat-26825.herokuapp.com/post
 
 ```
     params: 
         username: string
 
-    ex. https://cryptic-basin-01283.herokuapp.com/post?username=hoge
+    ex. https://quiet-retreat-26825.herokuapp.com/post?username=hoge
 
     return json 
     対象ユーザの全投稿が返ってくる
@@ -128,13 +144,13 @@
 ```
 
 ## タイトル検索
-> https://cryptic-basin-01283.herokuapp.com/search
+> https://quiet-retreat-26825.herokuapp.com/search
 
 ```
     params: 
         title: string
 
-    ex. https://cryptic-basin-01283.herokuapp.com/search?title=hoge
+    ex. https://quiet-retreat-26825.herokuapp.com/search?title=hoge
 
     return json 
     タイトルに部分一致したコンテンツが全て返ってくる。
@@ -149,13 +165,13 @@
 ```
 
 ## 直近のN件を取得
-> https://cryptic-basin-01283.herokuapp.com/current
+> https://quiet-retreat-26825.herokuapp.com/current
 
 ```
     params: 
         num: integer
 
-    ex. https://cryptic-basin-01283.herokuapp.com/current?num=hoge
+    ex. https://quiet-retreat-26825.herokuapp.com/current?num=hoge
 
     return json 
     num件だけランダムでコンテンツを返す。
@@ -170,13 +186,13 @@
 ```
 
 ## 閲覧する際のデータ取得
-> https://cryptic-basin-01283.herokuapp.com/show
+> https://quiet-retreat-26825.herokuapp.com/show
 
 ```
     params: 
         id: integer *content_id
 
-    ex. https://cryptic-basin-01283.herokuapp.com/show?id=hoge
+    ex. https://quiet-retreat-26825.herokuapp.com/show?id=hoge
 
     return json 
     閲覧予定コンテンツとランダム抽出のコンテンツ10件を返す。
@@ -201,13 +217,13 @@
 ```
 
 ## お気に入り呼び出し
-> https://cryptic-basin-01283.herokuapp.com/fav/search
+> https://quiet-retreat-26825.herokuapp.com/fav/search
 
 ```
     params: 
         user_id: integer
 
-    ex. https://cryptic-basin-01283.herokuapp.com/fav/search?user_id=hoge
+    ex. https://quiet-retreat-26825.herokuapp.com/fav/search?user_id=hoge
 
     return json 
     指定されたユーザがファボってるコンテンツを全て返す。
