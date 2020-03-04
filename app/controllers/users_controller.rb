@@ -13,6 +13,10 @@ class UsersController < ApplicationController
   def show
   end
 
+  def auth
+    
+  end
+
   def add
     data = {
       "username":params[:username],

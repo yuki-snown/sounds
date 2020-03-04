@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get "fav/add" => "favorites#add"
   #ユーザの登録
   get "user/add" => "users#add"
+  #ログイン用
+  get "auth" => "users#auth"
 
   #自分が投稿した音楽
   get "post" => "users#home"
