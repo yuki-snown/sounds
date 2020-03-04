@@ -14,12 +14,8 @@ class UsersController < ApplicationController
   end
 
   def auth
-    data = {
-      "username":params[:username],
-      "password":params[:password]
-    }
-    @user = User.find_by(username: data["username"], password: data["password"])
-    if @user.nil?
+    @user = User.find_by(username: params[:username], password: params[:password])
+    if @user == []
       return false
     else
       return true
