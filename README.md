@@ -44,13 +44,19 @@
 
 > https://quiet-retreat-26825.herokuapp.com/users
 
+* return id, title
+
 ### contentsのtableの確認
 
 > https://quiet-retreat-26825.herokuapp.com/contents
 
+* return id, title
+
 ### favoritesのtableの確認
 
 > https://quiet-retreat-26825.herokuapp.com/favorites
+
+* return id, user_id, content_id
 
 
 ### 音楽登録
@@ -61,8 +67,8 @@
     params: 
         user_id: integer
         title: string
-        image: binary
-        sound: binary
+        image: binary request.files
+        sound: binary request.files
 
     ex. https://quiet-retreat-26825.herokuapp.com/resister?user_id=1&title=hoge&image=hogehogehoge&sound=hogehogehoge
 
@@ -98,7 +104,7 @@
 
     ex. https://quiet-retreat-26825.herokuapp.com/user/add?username=hoge&password=hogehoge
 
-    成功時: {"status":"success"}
+    成功時: {"status":"success", "id": 1}
 
     失敗持: {"status":"failed"}
 
@@ -120,6 +126,14 @@
 
 ```
 
+### 音楽URL
+> https://quiet-retreat-26825.herokuapp.com/sound/content_id
+
+
+### 画像URL
+> https://quiet-retreat-26825.herokuapp.com/image/content_id
+
+
 ### 自分が投稿した音楽
 > https://quiet-retreat-26825.herokuapp.com/post
 
@@ -133,10 +147,7 @@
     対象ユーザの全投稿が返ってくる
     {
         id:hoge,
-        user_id:hoge,
         title; hoge,
-        image: hoge,
-        sound: hoge
     }
 
 ```
@@ -154,10 +165,7 @@
     タイトルに部分一致したコンテンツが全て返ってくる。
     {
         id:hoge,
-        user_id:hoge,
         title; hoge,
-        image: hoge,
-        sound: hoge
     }
 
 ```
@@ -175,10 +183,7 @@
     num件だけランダムでコンテンツを返す。
     {
         id:hoge,
-        user_id:hoge,
         title; hoge,
-        image: hoge,
-        sound: hoge
     }
 
 ```
@@ -197,17 +202,21 @@
     {
         "main":{
             id:hoge,
-            user_id:hoge,
             title; hoge,
-            image: hoge,
-            sound: hoge
         }
         "other"{
-            id:hoge,
-            user_id:hoge,
-            title; hoge,
-            image: hoge,
-            sound: hoge
+            [
+                id:hoge,
+                title; hoge,
+            ],
+            [
+                id:hoge,
+                title; hoge,
+            ],
+            [
+                id:hoge,
+                title; hoge,
+            ]
             .....
         }
     }
@@ -227,10 +236,7 @@
     指定されたユーザがファボってるコンテンツを全て返す。
     {
         id:hoge,
-        user_id:hoge,
         title; hoge,
-        image: hoge,
-        sound: hoge
     }
 ```  
 <br>
