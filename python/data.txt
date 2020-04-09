@@ -1,0 +1,52 @@
+users
+
+username: gopher
+password: go
+
+username: pythonista
+password: python
+
+username: myrails
+password: ruby
+
+contents
+
+user_id: 1
+title: test1
+image: 
+sound: 
+
+user_id: 2
+title: test2
+image: 
+sound: 
+
+user_id: 3
+title: test3
+image: 
+sound: 
+
+user_id: 1
+title: test4
+image: 
+sound: 
+
+user_id: 3
+title: test5
+image: 
+sound: 
+
+favorites
+
+user_id: 1
+content_id: 2
+
+user_id: 2
+content_id: 1
+
+user_id: 1
+content_id: 5
+
+user_id: 2
+content_id: 3
+
